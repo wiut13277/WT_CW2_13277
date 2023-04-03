@@ -12,3 +12,5 @@ Technologies Used
 Backend: Node.js, Express.js
 
 Thic blog application was created by Student with ID 00013277
+
+Link for github : https://github.com/wiut13277/WT_CW2_13277
