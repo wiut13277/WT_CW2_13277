@@ -1,0 +1,13 @@
+html
+  head
+    link(rel='stylesheet', href='/posts.css')
+    title All Posts
+    
+  body
+    h1 All Posts
+    ul
+      each post in posts
+        li
+          a(href=`/posts/${post.id}`)= post.title
+    p
+      a(href='/posts/new') New Post

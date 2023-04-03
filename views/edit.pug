@@ -1,0 +1,13 @@
+html
+  head
+    title Edit #{post.title}
+    link(rel='stylesheet' href='/new.css')
+  body
+    h1 Edit #{post.title}
+    form(action=`/posts/${post.id}` method='POST')
+      label(for='title') Title
+      input#title(type='text' name='title' value=post.title required)
+      label(for='content') Content
+      textarea#content(name='content' rows='10' required)= post.content
+      button(type='submit') Save
+    a(href=`/posts/${post.id}`) Cancel

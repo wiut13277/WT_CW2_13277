@@ -1,0 +1,14 @@
+html
+  head
+    title New Post
+   
+    link(rel='stylesheet' href='/new.css')
+  body
+    h1 New Post
+    form(action='/posts' method='POST')
+      label(for='title') Title
+      input#title(type='text' name='title' required)
+      label(for='content') Content
+      textarea#content(name='content' rows='10' required)
+      button(type='submit') Save
+    a(href='/posts') Cancel

@@ -1,0 +1,23 @@
+html
+  head
+    link(rel='stylesheet', href='/index.css')
+    title Blog
+     
+  body
+    h1 Blog
+    ul
+      each post in posts
+        li
+          h2
+            a(href=`/posts/${post.id}`)= post.title
+          p= post.content
+          p Posted on #{post.createdAt.toDateString()}
+          a(href=`/posts/${post.id}/edit`) Edit
+          form(action=`/posts/${post.id}/delete` method='POST' onsubmit='return confirm("Are you sure you want to delete this post?")')
+            button Delete
+    a(href='/posts/new') New Post
+
+  h6 
+  <div class="credit">This Blog application created by <span>"00013277"</span> | “This web application was created to fulfill Web
+Technology modules requirements and does not represent an actual company or service"</div>
+    
